@@ -1,7 +1,5 @@
 # Upload-image-vue
 
-[![N|Otiumtek](https://cldup.com/dTxpPi9lDf.thumb.png)](https://nodesource.com/products/nsolid)
-
 [![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
 
 ### Getting Started
@@ -21,10 +19,13 @@ $ yarn add upload-image-vue --save
 
 ### Usage example
 
+View example in codesanbox
+https://codesandbox.io/s/epic-river-zp6et?file=/src/App.vue
+
 ```vue
 <template>
   <div id="app">
-    <uploader-image 
+    <upload-image-vue
       v-bind:loading="loading"
       v-bind:files="files"
       v-bind:callbackUpload="upload"
@@ -34,43 +35,40 @@ $ yarn add upload-image-vue --save
 </template>
 
 <script>
-import UploaderImage from 'upload-library'
+import UploadImageVue from "upload-image-vue";
+import "upload-image-vue/dist/lib/upload-image-vue.min.css";
 
 export default {
-  name: 'app',
-  data(){
+  name: "App",
+  data() {
     return {
       files: [],
       loading: false,
     };
   },
   methods: {
-    upload: async function(data){
+    upload: async function (data) {
       this.loading = true;
       setTimeout(() => {
         this.files = this.files.concat([
-          {id: 1, url:"//s.fenicio.app/f2/tex/productos/1-sublimable_460x460_1537557205_cca.jpg"},
-          {id: 2, url:"//s.fenicio.app/f2/tex/productos/1-sublimable_460x460_1537557205_cca.jpg"}
+          { id: 1, url: "https://via.placeholder.com/150" },
+          { id: 2, url: "https://via.placeholder.com/150" },
+          { id: 3, url: "https://via.placeholder.com/150" },
         ]);
         this.loading = false;
-      }, 3000)   
+      }, 3000);
     },
-    remove: async function(id){
-      this.files = this.files.filter(item => item.id != id);
-    }
+    remove: async function (id) {
+      this.files = this.files.filter((item) => item.id != id);
+    },
   },
   components: {
-    UploaderImage
-  }
-}
+    UploadImageVue,
+  },
+};
 </script>
 
 <style>
-#app {
-  margin-top: 60px;
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 30px;
-}
 </style>
+
 ```

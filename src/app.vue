@@ -26,9 +26,9 @@ export default {
       this.loading = true;
       setTimeout(() => {
         this.files = this.files.concat([
-          {id: 1, url:"//s.fenicio.app/f2/tex/productos/1-sublimable_460x460_1537557205_cca.jpg"},
-          {id: 2, url:"//s.fenicio.app/f2/tex/productos/1-sublimable_460x460_1537557205_cca.jpg"},
-          {id: 3, url:"//s.fenicio.app/f2/tex/productos/1-sublimable_460x460_1537557205_cca.jpg"},
+          {id: 1, url:"https://via.placeholder.com/150"},
+          {id: 2, url:"https://via.placeholder.com/150"},
+          {id: 3, url:"https://via.placeholder.com/150"},
         ]);
         this.loading = false;
       }, 3000)   

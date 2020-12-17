@@ -1,4 +1,4 @@
-import uploadLibrary from './components/uploader'
+import UploadImageVue from './components/uploader'
 import './styles/lib.scss'
 
-export default uploadLibrary
+export default UploadImageVue

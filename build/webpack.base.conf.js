@@ -10,7 +10,7 @@ function resolve (dir) {
 module.exports = {
   entry: {
     docs: './src/docs.js',
-    ['upload-library']: './src/lib.js'
+    ['upload-image-vue']: './src/lib.js'
   },
   output: {
     path: config.build.assetsRoot,

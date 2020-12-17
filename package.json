@@ -1,6 +1,6 @@
 {
   "name": "upload-image-vue",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "description": "Library for upload items",
   "author": "Yaniel Blanco <yaniel2015@yandex.com>",
   "main": "dist/lib/upload-image-vue.min.js",
